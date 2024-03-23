@@ -4,7 +4,7 @@
 
 *A short description of the keyboard/project*
 
-* Keyboard Maintainer: [y](https://github.com/sato5322)
+* Keyboard Maintainer: [masashi sato](https://github.com/sato5322)
 * Hardware Supported: *The PCBs, controllers supported*
 * Hardware Availability: *Links to where you can find this hardware*
 
