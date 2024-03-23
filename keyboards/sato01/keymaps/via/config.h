@@ -20,5 +20,10 @@
 //#define NO_ACTION_ONESHOT
 
 #define DYNAMIC_KEYMAP_LAYER_COUNT  6
+
+#define TAPPING_TERM 200
+#define HOLD_ON_OTHER_KEY_PRESS
+#define TAPPING_FORCE_HOLD
+
 //#define PRODUCT saot01
 
