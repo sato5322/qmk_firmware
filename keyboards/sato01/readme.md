@@ -5,7 +5,7 @@
 *A short description of the keyboard/project*
 
 
-![sato01](http://i.imgur.com/Jjwsc.jpg )
+![sato01](./sato01.jpg )
 
 * Keyboard Maintainer: [masashi sato](https://github.com/sato5322)
 * Hardware Supported: *The PCBs, controllers supported*
