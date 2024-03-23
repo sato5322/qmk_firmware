@@ -5,7 +5,7 @@
 *A short description of the keyboard/project*
 
 
-![sato01](./sato01.jpg )
+![sato01](https://github.com/sato5322/qmk_firmware/blob/master/keyboards/sato01/sato01.JPG)
 
 * Keyboard Maintainer: [masashi sato](https://github.com/sato5322)
 * Hardware Supported: *The PCBs, controllers supported*
