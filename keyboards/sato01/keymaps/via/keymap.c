@@ -3,6 +3,7 @@
 
 #include QMK_KEYBOARD_H
 
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /*
      * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
@@ -33,4 +34,30 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     [0] =   { ENCODER_CCW_CW(KC_P, KC_P), ENCODER_CCW_CW(KC_P, KC_P)  }
     //                  Encoder 1                                     Encoder 2
 };
+#endif
+
+
+
+//for Keyboard Quantizer Utility.app
+
+#ifdef VIA_ENABLE
+#include "via.h"
+void via_custom_value_command_kb(uint8_t *data, uint8_t length) {
+    uint8_t command_id = data[0];
+    uint8_t *command_data = &(data[1]);
+
+    if (command_id == id_set_keyboard_value && command_data[0] == 0x99) {
+        // Set default layer
+        if (command_data[1] < DYNAMIC_KEYMAP_LAYER_COUNT)
+        {
+            default_layer_set(1 << command_data[1]);
+        }
+    }
+    else if (command_id == id_get_keyboard_value && command_data[0] == 0x99) {
+        // Return device id
+        // TODO: Save and read device id from eeprom
+        const uint8_t device_id = 0;
+        command_data[1] = device_id;
+    }
+}
 #endif
